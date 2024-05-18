@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Styles/Styles_for_four_page.css">
+    </head>
+
+    <body>
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <span class="header__">
+            <nav class="nav">
+                <a href="/Index.html">
+                    <button class="header__logo">
+                        <img src="/images/e56d99d712ba52fe.png" alt="" class="header__pic">
+                        <span>ОАО “ТяпЛяп” </span>
+                    </button>
+                </a>
+                <span class="container">
+                    <a href="/About.html" class="button type--B">
+                    <div class="button__line"></div>
+                    <div class="button__line"></div>
+                    <span class="button__text">О нас</span>
+                    <div class="button__drow1"></div>
+                    <div class="button__drow2"></div>
+                    </a>
+                    <a href="/Services.html" class="button type--B">
+                    <div class="button__line"></div>
+                    <div class="button__line"></div>
+                    <span class="button__text">Услуги</span>
+                    <div class="button__drow1"></div>
+                    <div class="button__drow2"></div>
+                    </a>
+                    <a href="/Communication.html" class="button type--B">
+                        <div class="button__line"></div>
+                        <div class="button__line"></div>
+                        <span class="button__text">Cвязь</span>
+                        <div class="button__drow1"></div>
+                        <div class="button__drow2"></div>
+                    </a>
+                </span>
+            </nav>
+            <h1>
+                <blockquote>Если вы хотите поработать с нами над вашим проектом, то лучше всего начать именно здесь.</blockquote>
+            </h1>
+        </span>
+        <form id="form__" action="#" method="post">
+            <div class="frame5">
+                <div>
+                    <input type="text" placeholder="Ваше ФИО" name="ФИО" class="underlining_line_full">
+                </div>
+                <div>
+                    <input type="text" placeholder="Название организации" name="Название организации" class="underlining_line_full">
+                </div>  
+                <span>
+                    <input type="email" placeholder="Ваш Email" name="Email" class="underlining_line_half">
+                </span>
+                <span>
+                    <input type="tel" placeholder="Ваш номер телефона" name="Телефон" class="underlining_line_half">
+                </span>
+                <div>
+                    <input type="text" placeholder="Расскажите нам о совем продукте" name="Продукт" class="underlining_line_full">
+                </div> 
+                <div id="frame6">Как мы можем вам помочь?</div>
+                <div class="circles">
+                    <fieldset id="group1">
+                        <div>
+                            <input type="radio" id="Брендинг" value="value1" name="group1" checked />
+                            <label for="Брендинг">Брендинг</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="Веб-сайт" value="value2" name="group1">
+                            <label for="Веб-сайт">Веб-сайт</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="UI/Ux" value="value3" name="group1">
+                            <label for="UI/Ux">UI/Ux</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="Предотвращение угроз" value="value4" name="group1">
+                            <label for="Предотвращение угроз">Предотвращение угроз</label>
+                        </div>
+                        </fieldset>
+                    <fieldset id="group2">
+                        <div>   
+                            <input type="radio" id="Управление инцидентами" value="value1" name="group2" checked />
+                            <label for="Управление инцидентами">Управление инцидентами</label>
+                        </div>
+                        <div>  
+                            <input type="radio" id="Восстановление" value="value2" name="group2">
+                            <label for="Восстановление">Восстановление</label>
+                        </div> 
+                        <div>
+                            <input type="radio" id="Сопровождение программных продуктов" value="value3" name="group2">
+                            <label for="Сопровождение программных продуктов">Сопровождение программных продуктов</label>
+                        </div>
+                        <div>    
+                            <input type="radio" id="Техническая поддержка программ" value="value4" name="group2">
+                            <label for="Техническая поддержка программ">Техническая поддержка программ</label>
+                        </div>   
+                    </fieldset>
+                </div>
+                <a href="#popup-box" class="RectangleSend_Email_button">
+                    <div  class="RectangleSend_Email_text">Отправить письмо</div>
+                        <div class="arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        </div>
+                </a>
+                <div id="popup-box" class="modal">
+                    <div class="content">
+                        <h1>
+                            Ваша форма была отправлена! <a href="#">&times;</a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </form>    
+    </body>
+</html>

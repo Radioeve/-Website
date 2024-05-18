@@ -1,0 +1,980 @@
+/*Background*/
+/*****************/
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-20deg, #f60 50%,	#fff 50%);
+  bottom:0;
+  left:-100%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+/*********************/
+.nav{
+  justify-content: flex-end;
+  text-align: flex-end;
+  word-spacing: -.4ch;
+  line-height: 4rem;
+}
+/****Кнопки******/
+.header__logo{
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 36px;
+  font-weight: 300;
+  background:
+  linear-gradient(currentColor 0 0) 0 0,
+  linear-gradient(currentColor 0 0) 0 0,
+  linear-gradient(currentColor 0 0) 100% 100%,
+  linear-gradient(currentColor 0 0) 100% 100%;
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.header__logo:hover{
+  --d: 100%;
+}
+.header__pic{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  white-space: nowrap;
+}
+.type--A{
+--line_color : #555555 ;
+--back_color : #FFECF6  ;
+}
+.type--B{
+--line_color : #1b1919 ;
+--back_color : #E9ECFF
+}
+.button{
+  position : relative;
+  z-index : 0 ;
+  width : 240px ;
+  height : 56px ;
+  text-decoration : none ;
+  font-size : 14px ; 
+  font-weight : bold ;
+  color : var(--line_color) ;
+  letter-spacing : 2px ;
+  transition : all .3s ease ;
+}
+.button__text{
+  display : flex ;
+  justify-content : center ;
+  align-items : center ;
+  width : 100% ;
+  height : 100% ;
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 24px;
+  font-weight: 300;
+}
+.button::before,
+.button::after,
+.button__text::before,
+.button__text::after{
+  content : '' ;
+  position : absolute ;
+  height : 3px ;
+  border-radius : 2px ;
+  background : var(--line_color) ;
+  transition : all .5s ease ;
+}
+.button::before{
+  top : 0 ;
+  left : 54px ;
+  width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.button::after{
+  top : 0 ;
+  right : 54px ;
+  width : 8px ;
+}
+.button__text::before{
+  bottom : 0 ;
+  right : 54px ;
+  width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.button__text::after{
+  bottom : 0 ;
+  left : 54px ;
+  width : 8px ;
+}
+.button__line{
+  position : absolute ;
+  top : 0 ;
+  width : 56px ;
+  height : 100% ;
+  overflow : hidden ;
+}
+.button__line::before{
+  content : '' ;
+  position : absolute ;
+  top : 0 ;
+  width : 150% ;
+  height : 100% ;
+  box-sizing : border-box ;
+  border-radius : 300px ;
+  border : solid 3px var(--line_color) ;
+}
+.button__line:nth-child(1),
+.button__line:nth-child(1)::before{
+  left : 0 ;
+}
+.button__line:nth-child(2),
+.button__line:nth-child(2)::before{
+  right : 0 ;
+}
+.button:hover{
+  letter-spacing : 6px ;
+}
+.button:hover::before,
+.button:hover .button__text::before{
+  width : 8px ;
+}
+.button:hover::after,
+.button:hover .button__text::after{
+  width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.button__drow1,
+.button__drow2{
+  position : absolute ;
+  z-index : -1 ;
+  border-radius : 16px ;
+  transform-origin : 16px 16px ;
+}
+.button__drow1{
+  top : -16px ;
+  left : 40px ;
+  width : 32px ;
+  height : 0;
+  transform : rotate( 30deg ) ;
+}
+.button__drow2{
+  top : 44px ;
+  left : 77px ;
+  width : 32px ;
+  height : 0 ;
+  transform : rotate(-127deg ) ;
+}
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2::before,
+.button__drow2::after{
+  content : '' ;
+  position : absolute ;
+}
+.button__drow1::before{
+  bottom : 0 ;
+  left : 0 ;
+  width : 0 ;
+  height : 32px ;
+  border-radius : 16px ;
+  transform-origin : 16px 16px ;
+  transform : rotate( -60deg ) ;
+}
+.button__drow1::after{
+  top : -10px ;
+  left : 45px ;
+  width : 0 ;
+  height : 32px ;
+  border-radius : 16px ;
+  transform-origin : 16px 16px ;
+  transform : rotate( 69deg ) ;
+}
+.button__drow2::before{
+  bottom : 0 ;
+  left : 0 ;
+  width : 0 ;
+  height : 32px ;
+  border-radius : 16px ;
+  transform-origin : 16px 16px ;
+  transform : rotate( -146deg ) ;
+}
+.button__drow2::after{
+  bottom : 26px ;
+  left : -40px ;
+  width : 0 ;
+  height : 32px ;
+  border-radius : 16px ;
+  transform-origin : 16px 16px ;
+  transform : rotate( -262deg ) ;
+}
+.button__drow1,
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2,
+.button__drow2::before,
+.button__drow2::after{
+  background : var( --back_color ) ;
+}
+.button:hover .button__drow1{
+  animation : drow1 ease-in .06s ;
+  animation-fill-mode : forwards ;
+}
+.button:hover .button__drow1::before{
+  animation : drow2 linear .08s .06s ;
+  animation-fill-mode : forwards ;
+}
+.button:hover .button__drow1::after{
+  animation : drow3 linear .03s .14s ;
+  animation-fill-mode : forwards ;
+}
+.button:hover .button__drow2{
+  animation : drow4 linear .06s .2s ;
+  animation-fill-mode : forwards ;
+}
+.button:hover .button__drow2::before{
+  animation : drow3 linear .03s .26s ;
+  animation-fill-mode : forwards ;
+}
+.button:hover .button__drow2::after{
+  animation : drow5 linear .06s .32s ;
+  animation-fill-mode : forwards ;
+}
+@keyframes drow1{
+  0%   { height : 0 ; }
+  100% { height : 100px ; }
+}
+@keyframes drow2{
+  0%   { width : 0 ; opacity : 0 ;}
+  10%  { opacity : 0 ;}
+  11%  { opacity : 1 ;}
+  100% { width : 120px ; }
+}
+@keyframes drow3{
+  0%   { width : 0 ; }
+  100% { width : 80px ; }
+}
+@keyframes drow4{
+  0%   { height : 0 ; }
+  100% { height : 120px ; }
+}
+@keyframes drow5{
+  0%   { width : 0 ; }
+  100% { width : 124px ; }
+}
+.container{
+  width : 100% ;
+  height : 300px ;
+  display : flex ;
+  flex-direction : column ;
+  justify-content: left;
+  align-items : start ;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+.button:not(:last-child){
+  margin-bottom : 64px ;
+}
+/**********************************/
+.header__{
+  display: inline-flex;
+  padding-bottom: 4rem;
+}
+h1{
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 8rem;
+  margin-left: 2rem;
+  animation-name: h1__anim;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@keyframes h1__anim{
+  from {
+    transform: translateX(120%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.one_way_line{
+    color:rgb(30,30,30);
+    display: inline-flex;
+    width: 100%;
+    border: none;
+    border-top: 3px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+.RectanglePhoto{
+  display: inline-flex;
+}
+#pred__carousel{
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 48px;
+  font-weight: 300;
+  text-align: start;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+/******Карусель*****/
+#carousel{
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+}
+.carousel {
+  display: flex-end;
+  justify-content: flex-end;
+  align-items:flex-end;
+  height: 100vh;
+  margin-left: 6rem;
+  margin-top: 20rem;
+}
+
+.card {
+  position: absolute;
+  border-radius: 20px;
+  border: 2px solid rgb(30, 30, 30);
+  width: 400px;
+  height: 300px;
+  padding: 20px;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: carousel 24s linear infinite;
+}
+.carousel:hover .card{
+  animation-play-state: paused;
+}
+
+.card:nth-child(1) {
+  animation-delay: -3s;
+}
+.card:nth-child(2) {
+  animation-delay: 0;
+}
+.card:nth-child(3) {
+  animation-delay: 3s;
+}
+.card:nth-child(4) {
+  animation-delay: 6s;
+}
+.card:nth-child(5) {
+  animation-delay: 9s;
+}
+.card:nth-child(6) {
+  animation-delay: 12s;
+}
+.card:nth-child(7) {
+  animation-delay: 15s;
+}
+.card:last-child {
+  animation-delay: 18s;
+}
+
+@keyframes  carousel {
+0% {
+  transform: translateY(100%) scale(0.5);
+  opacity: 0;
+  visibility: hidden;
+}
+3%, 20% {
+  transform: translateY(100%) scale(0.7);
+  opacity: 0.4;
+  visibility: visible;
+}
+23%, 40% { 
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+43%, 60% {
+  transform: translateY(-100%) scale(0.7);
+  opacity: 0.4;
+  visibility: visible;
+}
+63% {
+  transform: translateY(-100%) scale(0.5);
+  opacity: 0;
+  visibility: visible;
+}
+100% {
+  transform: translateY(-100%) scale(0.5);
+  opacity: 0;
+  visibility: hidden;
+}
+}
+
+img.carousel__image{
+  min-width: 500px;
+  width: 100%;
+  height: 800px;
+  position: static;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  
+  @media screen and (max-width: 600px){
+    img.bg {
+      left: 50%;
+      margin-left: -320px;
+    }
+  }
+}
+.carousel__rct{
+  position:relative;
+  width: 100%;
+  height: 200px;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 20px;
+  display: flexbox;
+  margin-top: 0.5rem;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+.carousel__text{
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 21px;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+.rectangle_carousel_first{
+  position:relative;
+  width: 600px;
+  height: 1020px;
+  border: 4px solid black;
+  text-align: center;
+  border-radius: 20px;
+  display: flex;
+}
+.CSSgal {
+position: relative;
+overflow: hidden;
+height: 100%; 
+}
+
+.CSSgal .slider {
+height: 100%;
+white-space: nowrap;
+font-size: 0;
+transition: 0.8s;
+}
+
+.CSSgal .slider > * {
+font-size: 1rem;
+display: inline-block;
+white-space: normal;
+vertical-align: top;
+height: 100%;
+width: 100%;
+background: none 50% no-repeat;
+background-size: cover;
+}
+.CSSgal .prevNext {
+position: absolute;
+z-index: 1;
+top: 50%;
+width: 100%;
+height: 0;
+}
+
+.CSSgal .prevNext > div+div {
+visibility: hidden;
+}
+
+.CSSgal .prevNext a {
+background: #fff;
+position: absolute;
+width:       60px;
+height:      60px;
+line-height: 60px; 
+text-align: center;
+opacity: 0.7;
+-webkit-transition: 0.3s;
+        transition: 0.3s;
+-webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+left: 0;
+}
+.CSSgal .prevNext a:hover {
+opacity: 1;
+}
+.CSSgal .prevNext a+a {
+left: auto;
+right: 0;
+}
+.CSSgal .bullets {
+position: absolute;
+z-index: 2;
+bottom: 0;
+padding: 10px 0;
+width: 100%;
+text-align: center;
+}
+.CSSgal .bullets > a {
+display: inline-block;
+width:       30px;
+height:      30px;
+line-height: 30px;
+text-decoration: none;
+text-align: center;
+background: rgb(30, 30, 30);
+-webkit-transition: 0.3s;
+        transition: 0.3s;
+}
+.CSSgal .bullets > a+a {
+background: rgba(30, 30, 30, 0.5); 
+}
+.CSSgal .bullets > a:hover {
+background: rgba(30, 30, 30, 0.7) !important;
+}
+
+.CSSgal >s:target ~ .bullets >* {      background: rgba(30, 30, 30, 0.5);}
+
+#s1:target ~ .bullets >*:nth-child(1) {background: rgba(204,204,255,   1);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgba(204,204,255,   1);}
+#s3:target ~ .bullets >*:nth-child(3) {background: rgba(204,204,255,   1);}
+#s4:target ~ .bullets >*:nth-child(4) {background: rgba(204,204,255,   1);}
+
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+
+.CSSgal{
+color: #fff;  
+text-align: center;
+}
+.CSSgal .slider h2 {
+margin-top: 40vh;
+font-weight: 200;
+letter-spacing: -0.06em;
+word-spacing: 0.2em;
+font-size: 3em;
+}
+.CSSgal a {
+border-radius: 50%;
+margin: 0 3px;
+color: rgba(0,0,0,0.8);
+text-decoration: none;
+}
+/**************/
+.lines_in_different_directions{
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  margin-top: 4rem;
+}
+.lines_in_different_directions::after{
+  background: #fff;
+  border-radius: 20px;
+  border: 2px solid black;
+  backdrop-filter: blur(8px);
+  content: 'Портфолио';
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+.frame2{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction : column ;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.RectangleBIG{
+  position:relative;
+  width: 1200px;
+  height: 800px;
+  border: 2px solid black;
+  margin: 15px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+.background {
+  background-image: url(../images/website-3374825_1920.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.background2 {
+  background-image: url(../images/1681941921_sneg-top-p-kiberbezopasnost-kartinki-dlya-prezentatsi-27.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.background3 {
+  background-image: url(../images/coding-and-programming-computer-science-and-it.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.blur {
+  animation: changeWidth 8s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-right: 1px solid whitesmoke;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.multiple-filters {
+  backdrop-filter: blur(20px) saturate(120%) contrast(200%);
+}
+
+@keyframes changeWidth {
+  0% {
+    width: 0%;
+  }
+  5% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  80% {
+    width: 50%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.btn {
+  backface-visibility: hidden;
+  background: black;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  left: 50%;
+  padding: 12px 16px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  &:focus {
+    outline: none;
+  }
+}
+/**************************/
+.lines_in_different_directions2{
+  border: none;
+  border-top: 3px double #333;
+  color: #333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+.lines_in_different_directions2::after{
+  background: #fff;
+  border-radius: 20px;
+  border: 2px solid black;
+  backdrop-filter: blur(8px);
+  content: 'Наши клиенты';
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+}
+.frame4{
+  margin-bottom: 4rem;
+  line-height: 4rem;
+}
+#clients{
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 48px;
+  font-weight: 300;
+  text-align: start;
+  padding-bottom: 2rem;
+  text-align: center;
+
+}
+.rectangle_STR_first{
+  position:relative;
+  width: 100%;
+  height: 170px;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.brand-parent {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+}
+.brands-carousel {
+  height: 100px;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  -webkit-align-items: center;
+  animation: animate 10s linear infinite;
+}
+.brands-carousel .slide-content {
+  height: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+}
+.brands-carousel .slide-content img {
+  height: 100px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  white-space: nowrap;
+  color: #808080;
+  text-transform: uppercase;
+  padding: 20px;
+  width: 100%;
+  transition: all .5s ease-in-out 0s;
+}
+.brands-carousel .slide-content a:hover, .brands-carousel .slide-content a:active {
+  box-shadow: 0 0 25px rgba(0,0,0,.15);
+}
+@keyframes animate {
+  0% {
+      transform: translate3d(0, 0,0);
+  }
+  100% {
+      transform: translate3d(-100%, 0, 0);
+  }
+}
+@-webkit-keyframes animate {
+  0% {
+      transform: translate3d(0, 0,0);
+  }
+  100% {
+      transform: translate3d(-100%, 0, 0);
+  }
+}
+.brands-carousel .slide-content a img {
+  display: inline-block;
+  width: auto;
+  max-width: 100%!important;
+  height: auto;
+  max-height: 95%;
+  filter:    grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  opacity: .5;
+  transition: all .3s ease-in-out;
+}
+.brands-carousel .slide-content a:hover img, 
+.brands-carousel .slide-content a:active img {
+  filter:    grayscale(0);
+  -webkit-filter: grayscale(0);
+  opacity: 1;
+}
+/**********Подвал*****/
+.footer{
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+h4{
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 56px;
+  font-weight: 300;
+  text-align:start;
+  margin-left: 5rem;
+}
+.frame3{
+  display:inline-flex;
+  margin-bottom: 5rem;
+}
+.contact_footer{
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 26px;
+  font-weight: 300;
+  text-align:justify;
+  margin-left: 5rem;
+  line-height: 4rem;
+  width: 800px;
+}
+.nav_footer{
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 26px;
+  font-weight: 300;
+  text-align:center;
+  line-height: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+.about__footer{
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 26px;
+  font-weight: 300;
+  background: 
+  linear-gradient(#000 0 0) 
+  0% calc(-3px - 100%) /var(--d, 0%) 200% no-repeat;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+.about__footer:hover{
+  --d: 100%;
+  background-position: 50% 0%;
+  color: #fff;
+  transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
+}
+.services__footer{
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 26px;
+  font-weight: 300;
+  background: 
+  linear-gradient(#000 0 0) 
+  0% calc(-3px - 100%) /var(--d, 0%) 200% no-repeat;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+.services__footer:hover{
+  --d: 100%;
+  background-position: 50% 0%;
+  color: #fff;
+  transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
+}
+#line1__footer{
+  position: relative;
+  rotate: 270deg;
+  width: 100%;
+  border:none;
+  border-top:double #333;
+  color: #333;
+  overflow: visible;
+  display: flex ;
+}
+#line2__footer{
+  position: relative;
+  rotate: 90deg;
+  width: 100%;
+  border:none;
+  border-top:double #333;
+  color: #333;
+  overflow: hidden;
+  display: flex ;
+}
+#line3__footer{
+  position: relative;
+  width: 100%;
+  border:none;
+  border-top:double #333;
+  color: #333;
+  overflow: hidden;
+  display: flex ;
+}
+.footer_end{
+  color:rgb(30,30,30);
+  font-family: 'ITC Avant Garde Gothic Demi','Arial', sans-serif ;
+  font-size: 12px;
+  font-weight: 300;
+  display: inline;
+}
+#quote{
+  margin-left: 0.8rem;
+  text-align: left;
+}
+#sobaka{
+  text-align: right;
+  justify-content: end;
+  align-items: end;
+}
+/******************/
